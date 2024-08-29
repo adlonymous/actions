@@ -4,6 +4,7 @@ import {
   ActionGetResponse,
   ActionPostRequest,
   createActionHeaders,
+  ActionError,
 } from '@solana/actions';
 import {
   clusterApiUrl,
@@ -146,11 +147,10 @@ export const POST = async (req: Request) => {
           next: {
             type: 'inline',
             action: {
-              type: 'action',
+              type: 'completed',
               icon: 'https://ucarecdn.com/7aa46c85-08a4-4bc7-9376-88ec48bb1f43/-/preview/880x864/-/quality/smart/-/format/auto/',
               label: 'Thank You!',
               title: 'Donate SOL to Alice',
-              disabled: true,
               description:
                 'Cybersecurity Enthusiast | Support my research with a donation.',
             },
